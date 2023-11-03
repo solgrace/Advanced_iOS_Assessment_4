@@ -36,25 +36,56 @@ final class ModelData: ObservableObject {
         }
     }
     
+//    func addExpense(transaction: Transaction) {
+//
+//        let Expense = Expense(context: viewContext)
+//
+//        Expense.id = Int32(transaction.id)
+//        Expense.name = transaction.name
+//        Expense.amount = Int32(transaction.amount)
+//        Expense.category = transaction.category
+//        Expense.addTime = transaction.addTime
+//
+//        do {
+//            try viewContext.save()
+//
+//            Expenses.insert(Expense)
+//        }
+//        catch {
+//
+//            fatalError("could not add the expense to the CoreData stack \(error.localizedDescription)")
+//        }
+//    }
+    
     func addExpense(transaction: Transaction) {
+        let newExpense = Expense(context: viewContext)
         
-        let Expense = Expense(context: viewContext)
-        
-        Expense.id = Int32(transaction.id)
-        Expense.name = transaction.name
-        Expense.amount = Int32(transaction.amount)
-        Expense.category = transaction.category
-        Expense.addTime = transaction.addTime
+        newExpense.id = Int32(transaction.id)
+        newExpense.name = transaction.name
+        newExpense.amount = Int32(transaction.amount)
+        newExpense.category = transaction.category
+        newExpense.addTime = transaction.addTime
         
         do {
             try viewContext.save()
+            Expenses.insert(newExpense)
             
-            Expenses.insert(Expense)
+//            if let storeURL = viewContext.persistentStoreCoordinator?.persistentStores.first?.url {
+//                print("Expense added to Core Data at URL:")
+//                print(storeURL)
+//            }
+//
+//            print("Expense added to Core Data:")
+//            print("ID: \(newExpense.id)")
+//            print("Name: \(newExpense.name ?? "Unknown")")
+//            print("Amount: \(newExpense.amount)")
+//            print("Category: \(newExpense.category ?? "Unknown")")
+//            print("Add Time: \(newExpense.addTime ?? Date())")
+        } catch {
+            fatalError("Could not add the expense to the CoreData stack \(error.localizedDescription)")
         }
-        catch {
-            
-            fatalError("could not add the expense to the CoreData stack \(error.localizedDescription)")
-        }
+        
+        printAllExpenses()
     }
     
     func deleteExpense(transaction: Transaction) {
@@ -97,6 +128,71 @@ final class ModelData: ObservableObject {
             Expenses.removeAll()
         } catch let error as NSError {
             print("Error deleting all expenses: \(error), \(error.userInfo)")
+        }
+    }
+    
+    func countOfExpenses(category: String) -> Int {
+        
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Expense")
+        
+        fetchRequest.predicate = NSPredicate(format: "category == %@", category)
+        
+        do {
+                let count = try viewContext.count(for: fetchRequest)
+                return count
+            } catch {
+                print("Error fetching count for category \(category): \(error)")
+                return 0
+            }
+    }
+    
+    func sumOfCategory(category: String) -> Int {
+        
+        let fetchRequest: NSFetchRequest<Expense> = Expense.fetchRequest()
+            
+        // Set a predicate to filter the expenses by the provided category
+        fetchRequest.predicate = NSPredicate(format: "category == %@", category)
+        
+        do {
+            // Execute the fetch request
+            let fetchedExpenses = try viewContext.fetch(fetchRequest)
+            
+            // Calculate the sum of the amounts
+            let sum = fetchedExpenses.reduce(0) { $0 + Int($1.amount) }
+            
+            return sum
+        } catch {
+            print("Error fetching expenses for category \(category): \(error)")
+            return 0
+        }
+    }
+    
+    
+    
+    
+    
+    // For debugging purposes:
+    // Function to retrieve and print all data from the shared Core Data container
+    func printAllExpenses() {
+        let fetchRequest: NSFetchRequest<Expense> = Expense.fetchRequest()
+        
+        do {
+            let data = try viewContext.fetch(fetchRequest)
+            
+            if data.isEmpty {
+                print("No expenses found in shared Core Data.")
+            } else {
+                print("All expenses in shared Core Data:")
+                for expense in data {
+                    print("ID: \(expense.id)")
+                    print("Name: \(expense.name ?? "Unknown")")
+                    print("Amount: \(expense.amount)")
+                    print("Category: \(expense.category ?? "Unknown")")
+                    print("Add Time: \(expense.addTime ?? Date())")
+                }
+            }
+        } catch {
+            print("Error fetching expenses from shared Core Data: \(error)")
         }
     }
     

@@ -16,7 +16,6 @@ struct HomeView: View {
 
     @FetchRequest(entity: Expense.entity(), sortDescriptors: []) var expenses: FetchedResults<Expense>
     
-    
     let model = Inexpensify()
     
     var body: some View {
@@ -27,25 +26,78 @@ struct HomeView: View {
                 // Budget Overview Section
                 Text("Budget Overview")
                     .font(.largeTitle)
-                    .fontWeight(.bold)
-                        
-                // Display budget details here
+                    .fontWeight(.heavy)
+                    .padding(.bottom, 10)
+                    .overlay(
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundColor(.blue), alignment: .bottom
+                    )
+                
+                HStack {
+                    VStack {
+                        Text("Fashion")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        Text(String(modelData.sumOfCategory(category: "Fashion")))
+                            .font(.title)
+                            .foregroundColor(.blue)
+                    }
+                    .padding()
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(15)
+                    
+                    VStack {
+                        Text("Food")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        Text(String(modelData.sumOfCategory(category: "Food")))
+                            .font(.title)
+                            .foregroundColor(.blue)
+                    }
+                    .padding()
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(15)
+                    
+                    VStack {
+                        Text("Travel")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        Text(String(modelData.sumOfCategory(category: "Travel")))
+                            .font(.title)
+                            .foregroundColor(.blue)
+                    }
+                    .padding()
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(15)
+                    
+                }
                 
                 // We can display the three boxes of information here
                         
                 // Recent Expenses Section
                 Text("Recent Expenses")
                     .font(.title)
-                    .fontWeight(.bold)
+                    .fontWeight(.heavy)
+                    .padding(.bottom, 10)
+                    .overlay(
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundColor(.blue), alignment: .bottom
+                    )
                 
                 List(expenses, id: \.self) { expense in
                     
                     HStack {
-                        Text(expense.name ?? "") // Use default value in case name is nil
+                        Text(expense.name ?? "")
+                            .font(.headline)
                         Spacer()
                         Text("\(expense.amount)")
+                            .font(.subheadline)
                         Spacer()
                         Text("\(expense.category ?? "Generic")")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
                         
                         
                         Button(action: {
@@ -63,11 +115,12 @@ struct HomeView: View {
                 // Add Expense Button
                 NavigationLink(destination: addExpense()) {
                     Text("Add Expense")
-                        .foregroundColor(.white)
                         .font(.headline)
                         .padding()
+                        .frame(maxWidth: .infinity)
                         .background(Color.blue)
-                        .cornerRadius(10)
+                        .cornerRadius(15)
+                        .foregroundColor(.white)
                 }
                         
                 Spacer()

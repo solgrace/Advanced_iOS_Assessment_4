@@ -41,14 +41,14 @@ struct PersistenceController {
     let container: NSPersistentContainer // this is the Main persistent container
     
     init(inMemory: Bool = false) {
-        
+
         container = NSPersistentContainer(name: "Expenses") // Initliaze the persistence container with the Data model name
-        
+
         if (inMemory) {
-        
+
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        
+
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             // Handle error during store loading
             if let error = error as NSError? {
@@ -57,6 +57,21 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true // Automatically merge changes from parent context
     }
+        
+//    init() {
+//        container = NSPersistentContainer(name: "Expenses")
+//        if let storeDescription = container.persistentStoreDescriptions.first {
+//            storeDescription.setOption("group.ios_advanced_assignment_4.sharedcoredata" as NSObject, forKey: "Expense")
+//        }
+//        container.loadPersistentStores { (storeDescription, error) in
+//            if let error = error as NSError? {
+//                fatalError("Error loading persistent stores: \(error), \(error.userInfo)")
+//            } else {
+//                print("Persistent stores loaded successfully.")
+//            }
+//        }
+//        container.viewContext.automaticallyMergesChangesFromParent = true
+//    }
     
 }
 

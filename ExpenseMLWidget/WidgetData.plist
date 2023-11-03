@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   WidgetData.plist
+   IOS_Advanced_Assignment_4
+
+   Created by Grace Rufina Solibun on 3/11/2023.
+   Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+
+<plist version="1.0">
+<dict>
+    <key>Expenses</key>
+    <array>
+        <dict>
+            <key>category</key>
+            <string>Food</string>
+            <key>amount</key>
+            <string>$50</string>
+        </dict>
+        <dict>
+            <key>category</key>
+            <string>Fashion</string>
+            <key>amount</key>
+            <string>$250</string>
+        </dict>
+        <dict>
+            <key>category</key>
+            <string>Fun</string>
+            <key>amount</key>
+            <string>$130</string>
+        </dict>
+        <dict>
+            <key>category</key>
+            <string>Travel</string>
+            <key>amount</key>
+            <string>$900</string>
+        </dict>
+        <!-- Add more expenses as needed -->
+    </array>
+</dict>
+</plist>

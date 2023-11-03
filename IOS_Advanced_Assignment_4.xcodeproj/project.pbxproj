@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		645D40E12AF387B200E14D3F /* IOS-Advanced-Assignment-4-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64647DFC2AEA97CA001B42F8 /* IOS-Advanced-Assignment-4-Info.plist */; };
 		64647DF92AEA8760001B42F8 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64647DF82AEA8760001B42F8 /* ExchangeRates.swift */; };
 		64647DFB2AEA9156001B42F8 /* ExchangeRatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64647DFA2AEA9156001B42F8 /* ExchangeRatesResponse.swift */; };
 		64647DFE2AEAB34F001B42F8 /* MoneyExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64647DFD2AEAB34F001B42F8 /* MoneyExchangeView.swift */; };
 		646EA24E2AEE554400A448B8 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646EA24D2AEE554400A448B8 /* CurrencyConverter.swift */; };
 		646EA2512AEE830D00A448B8 /* FlagKit in Frameworks */ = {isa = PBXBuildFile; productRef = 646EA2502AEE830D00A448B8 /* FlagKit */; };
 		646EA2532AEE95FB00A448B8 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646EA2522AEE95FB00A448B8 /* SearchBarView.swift */; };
+		64EA90642AF4796400056C89 /* WidgetData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64EA90632AF4796400056C89 /* WidgetData.plist */; };
+		64F2778F2AF3B50300705A2D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645D40CD2AF3877C00E14D3F /* WidgetKit.framework */; };
+		64F277902AF3B50300705A2D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645D40CF2AF3877C00E14D3F /* SwiftUI.framework */; };
+		64F277932AF3B50300705A2D /* ExpenseMLWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F277922AF3B50300705A2D /* ExpenseMLWidgetBundle.swift */; };
+		64F277952AF3B50300705A2D /* ExpenseMLWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F277942AF3B50300705A2D /* ExpenseMLWidget.swift */; };
+		64F277972AF3B50700705A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F277962AF3B50700705A2D /* Assets.xcassets */; };
+		64F2779B2AF3B50700705A2D /* ExpenseMLWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 64F2778E2AF3B50300705A2D /* ExpenseMLWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		64F277AE2AF3B55B00705A2D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE9B2AE8D92300870F2C /* SettingsView.swift */; };
+		64F277C82AF3C91700705A2D /* FlagKit in Frameworks */ = {isa = PBXBuildFile; productRef = 64F277C72AF3C91700705A2D /* FlagKit */; };
 		64F9EC6A2AF0C7360090FC30 /* Inexpensify.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 64F9EC692AF0C7360090FC30 /* Inexpensify.mlmodel */; };
 		A152CE852AE8C57800870F2C /* IOS_Advanced_Assignment_4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE842AE8C57800870F2C /* IOS_Advanced_Assignment_4App.swift */; };
 		A152CE872AE8C57800870F2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE862AE8C57800870F2C /* ContentView.swift */; };
@@ -20,7 +30,6 @@
 		A152CE8C2AE8C57D00870F2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A152CE8B2AE8C57D00870F2C /* Preview Assets.xcassets */; };
 		A152CE982AE8D90300870F2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE972AE8D90200870F2C /* HomeView.swift */; };
 		A152CE9A2AE8D91400870F2C /* CurrencyExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE992AE8D91400870F2C /* CurrencyExchangeView.swift */; };
-		A152CE9C2AE8D92300870F2C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE9B2AE8D92300870F2C /* SettingsView.swift */; };
 		A152CE9E2AE8D93D00870F2C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE9D2AE8D93D00870F2C /* ModelData.swift */; };
 		A152CEA02AE8D94800870F2C /* ThemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CE9F2AE8D94800870F2C /* ThemeModifier.swift */; };
 		A152CEA32AE8E23C00870F2C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152CEA22AE8E23C00870F2C /* PersistenceController.swift */; };
@@ -30,13 +39,56 @@
 		DB5F52D02AF0C499004AFB5C /* ClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F52CF2AF0C499004AFB5C /* ClassificationView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		64F277992AF3B50700705A2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A152CE792AE8C57800870F2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64F2778D2AF3B50300705A2D;
+			remoteInfo = ExpenseMLWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		645D40DC2AF3878100E14D3F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				64F2779B2AF3B50700705A2D /* ExpenseMLWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64F277C52AF3B66200705A2D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		645D40CD2AF3877C00E14D3F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		645D40CF2AF3877C00E14D3F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		64647DF82AEA8760001B42F8 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
 		64647DFA2AEA9156001B42F8 /* ExchangeRatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExchangeRatesResponse.swift; path = "IOS_Advanced_Assignment_4/View Model/ExchangeRatesResponse.swift"; sourceTree = SOURCE_ROOT; };
 		64647DFC2AEA97CA001B42F8 /* IOS-Advanced-Assignment-4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "IOS-Advanced-Assignment-4-Info.plist"; sourceTree = SOURCE_ROOT; };
 		64647DFD2AEAB34F001B42F8 /* MoneyExchangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyExchangeView.swift; sourceTree = "<group>"; };
 		646EA24D2AEE554400A448B8 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 		646EA2522AEE95FB00A448B8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		64EA90632AF4796400056C89 /* WidgetData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WidgetData.plist; sourceTree = "<group>"; };
+		64F277892AF3B2D800705A2D /* ExpenseMLWidget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ExpenseMLWidget; path = IOS_Advanced_Assignment_4/ExpenseMLWidget; sourceTree = "<group>"; };
+		64F2778E2AF3B50300705A2D /* ExpenseMLWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExpenseMLWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F277922AF3B50300705A2D /* ExpenseMLWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseMLWidgetBundle.swift; sourceTree = "<group>"; };
+		64F277942AF3B50300705A2D /* ExpenseMLWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseMLWidget.swift; sourceTree = "<group>"; };
+		64F277962AF3B50700705A2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64F277982AF3B50700705A2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64F9EC692AF0C7360090FC30 /* Inexpensify.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inexpensify.mlmodel; sourceTree = SOURCE_ROOT; };
 		A152CE812AE8C57800870F2C /* IOS_Advanced_Assignment_4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Advanced_Assignment_4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A152CE842AE8C57800870F2C /* IOS_Advanced_Assignment_4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_Advanced_Assignment_4App.swift; sourceTree = "<group>"; };
@@ -56,6 +108,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		64F2778B2AF3B50300705A2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64F277C82AF3C91700705A2D /* FlagKit in Frameworks */,
+				64F277902AF3B50300705A2D /* SwiftUI.framework in Frameworks */,
+				64F2778F2AF3B50300705A2D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A152CE7E2AE8C57800870F2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,10 +129,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		645D40CC2AF3877C00E14D3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64F277892AF3B2D800705A2D /* ExpenseMLWidget */,
+				645D40CD2AF3877C00E14D3F /* WidgetKit.framework */,
+				645D40CF2AF3877C00E14D3F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64F277912AF3B50300705A2D /* ExpenseMLWidget */ = {
+			isa = PBXGroup;
+			children = (
+				64F277922AF3B50300705A2D /* ExpenseMLWidgetBundle.swift */,
+				64F277942AF3B50300705A2D /* ExpenseMLWidget.swift */,
+				64F277962AF3B50700705A2D /* Assets.xcassets */,
+				64F277982AF3B50700705A2D /* Info.plist */,
+				64EA90632AF4796400056C89 /* WidgetData.plist */,
+			);
+			path = ExpenseMLWidget;
+			sourceTree = "<group>";
+		};
 		A152CE782AE8C57800870F2C = {
 			isa = PBXGroup;
 			children = (
 				A152CE832AE8C57800870F2C /* IOS_Advanced_Assignment_4 */,
+				64F277912AF3B50300705A2D /* ExpenseMLWidget */,
+				645D40CC2AF3877C00E14D3F /* Frameworks */,
 				A152CE822AE8C57800870F2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				A152CE812AE8C57800870F2C /* IOS_Advanced_Assignment_4.app */,
+				64F2778E2AF3B50300705A2D /* ExpenseMLWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +241,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		64F2778D2AF3B50300705A2D /* ExpenseMLWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64F2779C2AF3B50700705A2D /* Build configuration list for PBXNativeTarget "ExpenseMLWidgetExtension" */;
+			buildPhases = (
+				64F2778A2AF3B50300705A2D /* Sources */,
+				64F2778B2AF3B50300705A2D /* Frameworks */,
+				64F2778C2AF3B50300705A2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpenseMLWidgetExtension;
+			packageProductDependencies = (
+				64F277C72AF3C91700705A2D /* FlagKit */,
+			);
+			productName = ExpenseMLWidgetExtension;
+			productReference = 64F2778E2AF3B50300705A2D /* ExpenseMLWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A152CE802AE8C57800870F2C /* IOS_Advanced_Assignment_4 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A152CE8F2AE8C57D00870F2C /* Build configuration list for PBXNativeTarget "IOS_Advanced_Assignment_4" */;
@@ -161,10 +268,13 @@
 				A152CE7D2AE8C57800870F2C /* Sources */,
 				A152CE7E2AE8C57800870F2C /* Frameworks */,
 				A152CE7F2AE8C57800870F2C /* Resources */,
+				645D40DC2AF3878100E14D3F /* Embed Foundation Extensions */,
+				64F277C52AF3B66200705A2D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				64F2779A2AF3B50700705A2D /* PBXTargetDependency */,
 			);
 			name = IOS_Advanced_Assignment_4;
 			packageProductDependencies = (
@@ -184,6 +294,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					64F2778D2AF3B50300705A2D = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					A152CE802AE8C57800870F2C = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -206,15 +319,26 @@
 			projectRoot = "";
 			targets = (
 				A152CE802AE8C57800870F2C /* IOS_Advanced_Assignment_4 */,
+				64F2778D2AF3B50300705A2D /* ExpenseMLWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		64F2778C2AF3B50300705A2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EA90642AF4796400056C89 /* WidgetData.plist in Resources */,
+				64F277972AF3B50700705A2D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A152CE7F2AE8C57800870F2C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645D40E12AF387B200E14D3F /* IOS-Advanced-Assignment-4-Info.plist in Resources */,
 				A152CE8C2AE8C57D00870F2C /* Preview Assets.xcassets in Resources */,
 				A152CE892AE8C57D00870F2C /* Assets.xcassets in Resources */,
 			);
@@ -223,14 +347,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		64F2778A2AF3B50300705A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64F277932AF3B50300705A2D /* ExpenseMLWidgetBundle.swift in Sources */,
+				64F277952AF3B50300705A2D /* ExpenseMLWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A152CE7D2AE8C57800870F2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A152CE9C2AE8D92300870F2C /* SettingsView.swift in Sources */,
 				A152CE982AE8D90300870F2C /* HomeView.swift in Sources */,
 				A152CE872AE8C57800870F2C /* ContentView.swift in Sources */,
 				64647DFB2AEA9156001B42F8 /* ExchangeRatesResponse.swift in Sources */,
+				64F277AE2AF3B55B00705A2D /* SettingsView.swift in Sources */,
 				A152CEA02AE8D94800870F2C /* ThemeModifier.swift in Sources */,
 				64647DFE2AEAB34F001B42F8 /* MoneyExchangeView.swift in Sources */,
 				A16C953B2AF0E44000C83F30 /* Transaction.swift in Sources */,
@@ -250,7 +383,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		64F2779A2AF3B50700705A2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64F2778D2AF3B50300705A2D /* ExpenseMLWidgetExtension */;
+			targetProxy = 64F277992AF3B50700705A2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		64F2779D2AF3B50700705A2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ExpenseMLWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CXPW395VQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseMLWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ExpenseMLWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "organization.IOS-Advanced-Assignment-4.ExpenseMLWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64F2779E2AF3B50700705A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ExpenseMLWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CXPW395VQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseMLWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ExpenseMLWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "organization.IOS-Advanced-Assignment-4.ExpenseMLWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A152CE8D2AE8C57D00870F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,11 +565,14 @@
 		A152CE902AE8C57D00870F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IOS_Advanced_Assignment_4/IOS_Advanced_Assignment_4.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_Advanced_Assignment_4/Preview Content\"";
+				DEVELOPMENT_TEAM = 8CXPW395VQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IOS-Advanced-Assignment-4-Info.plist";
@@ -397,11 +597,14 @@
 		A152CE912AE8C57D00870F2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IOS_Advanced_Assignment_4/IOS_Advanced_Assignment_4.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_Advanced_Assignment_4/Preview Content\"";
+				DEVELOPMENT_TEAM = 8CXPW395VQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IOS-Advanced-Assignment-4-Info.plist";
@@ -426,6 +629,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		64F2779C2AF3B50700705A2D /* Build configuration list for PBXNativeTarget "ExpenseMLWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64F2779D2AF3B50700705A2D /* Debug */,
+				64F2779E2AF3B50700705A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A152CE7C2AE8C57800870F2C /* Build configuration list for PBXProject "IOS_Advanced_Assignment_4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -459,6 +671,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		646EA2502AEE830D00A448B8 /* FlagKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646EA24F2AEE830D00A448B8 /* XCRemoteSwiftPackageReference "FlagKit" */;
+			productName = FlagKit;
+		};
+		64F277C72AF3C91700705A2D /* FlagKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 646EA24F2AEE830D00A448B8 /* XCRemoteSwiftPackageReference "FlagKit" */;
 			productName = FlagKit;

@@ -22,10 +22,28 @@ struct addExpense: View {
     
     var body: some View {
         
-        VStack(spacing: 8) {
+        VStack(spacing: 20) {
             
-            TextField("Expense Name", text: $expenseName)
-            TextField("Expense Amount", text: $expenseAmount)
+            VStack(alignment: .leading, spacing: 10) {
+                
+                Text("Expense Name")
+                    .font(.headline)
+                TextField("E.g. Dinner at Joe's", text: $expenseName)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+            }
+            
+            VStack(alignment: .leading, spacing: 10) {
+                
+                Text("Expense Amount")
+                    .font(.headline)
+                TextField("E.g. 50", text: $expenseAmount)
+                    .keyboardType(.decimalPad)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+            }
             
             Button(action: {
                 
@@ -50,11 +68,13 @@ struct addExpense: View {
                     .foregroundColor(.white)
                     .font(.headline)
                     .padding()
+                    .frame(maxWidth: .infinity)
                     .background(Color.blue)
                     .cornerRadius(10)
             }
             
         }
+        .padding(.horizontal, 25)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Info"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
