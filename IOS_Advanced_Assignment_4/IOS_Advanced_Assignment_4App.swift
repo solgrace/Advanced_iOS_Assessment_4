@@ -12,6 +12,10 @@ struct IOS_Advanced_Assignment_4App: App {
     
     @StateObject private var modelData = ModelData()
     
+    init() {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in }
+        }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

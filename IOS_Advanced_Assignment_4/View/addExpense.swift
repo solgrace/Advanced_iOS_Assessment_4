@@ -84,11 +84,28 @@ struct addExpense: View {
         do {
             let prediction = try model.prediction(text: expenseName)
             category = prediction.label
+            sendNotification(text: expenseName)
         } catch {
             print("Error classifying text: \(error)")
             category = "Error"
         }
     }
+    
+    func sendNotification(text: String) {
+            let content = UNMutableNotificationContent()
+            content.title = "Classified"
+            content.body = "Classified " + text
+
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // Trigger the notification after 5 seconds
+
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+            UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    print("Error scheduling notification: \(error)")
+                }
+            }
+        }
 }
 
 struct addExpense_Previews: PreviewProvider {
